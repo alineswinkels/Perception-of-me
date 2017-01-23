@@ -1,4 +1,5 @@
 /*CSS DOCUMENT*/
+
 *{
   padding: 0;
   margin: 0;
@@ -6,7 +7,7 @@
 .visual{
   width: 100vw;
   height: 100vh;
-  background: red;
+  background-color: #2B2C2E;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,4 +15,13 @@
 canvas{
   height: 700px;
   width: 700px;
+  position: absolute;
+  left:20%;
+}
+
+svg {
+    width: 700px;
+    position: absolute;
+    left: 20%;
+    opacity: 0.4;
 }
