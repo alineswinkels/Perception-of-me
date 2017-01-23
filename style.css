@@ -1,0 +1,17 @@
+/*CSS DOCUMENT*/
+*{
+  padding: 0;
+  margin: 0;
+}
+.visual{
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+canvas{
+  height: 700px;
+  width: 700px;
+}
