@@ -1,85 +1,99 @@
-var answers = {
-  question_1: {
-    self: 3,
-    friend: 4
-  },
-  question_2: {
-    self: 1,
-    friend: 4
-  },
-  question_3: {
-    self: 3,
-    friend: 3
-  },
-  question_4: {
-    self: 2,
-    friend: 2
-  },
-  question_5: {
-    self: 5,
-    friend: 4
-  },
-  question_6: {
-    self: 4,
-    friend: 1
-  },
-  question_7: {
-    self: 2,
-    friend: 3
-  },
-  question_8: {
-    self: 3,
-    friend: 2
-  },
-  question_9: {
-    self: 3,
-    friend: 4
-  },
-  question_10: {
-    self: 5,
-    friend: 1
-  },
-  question_11: {
-    self: 2,
-    friend: 3
-  },
-  question_12: {
-    self: 2,
-    friend: 2
-  },
-  question_13: {
-    self: 4,
-    friend: 4
-  },
-  question_14: {
-    self: 4,
-    friend: 1
-  },
-  question_15: {
-    self: 5,
-    friend: 3
-  },
-  question_16: {
-    self: 4,
-    friend: 2
-  },
-  question_17: {
-    self: 1,
-    friend: 4
-  },
-  question_18: {
-    self: 1,
-    friend: 1
-  },
-  question_19: {
-    self: 1,
-    friend: 3
-  },
-  question_20: {
-    self: 3,
-    friend: 2
+// var answers = {
+//   question_1: {
+//     self: 3,
+//     friend: 4
+//   },
+//   question_2: {
+//     self: 1,
+//     friend: 4
+//   },
+//   question_3: {
+//     self: 3,
+//     friend: 3
+//   },
+//   question_4: {
+//     self: 2,
+//     friend: 2
+//   },
+//   question_5: {
+//     self: 5,
+//     friend: 4
+//   },
+//   question_6: {
+//     self: 4,
+//     friend: 1
+//   },
+//   question_7: {
+//     self: 2,
+//     friend: 3
+//   },
+//   question_8: {
+//     self: 3,
+//     friend: 2
+//   },
+//   question_9: {
+//     self: 3,
+//     friend: 4
+//   },
+//   question_10: {
+//     self: 5,
+//     friend: 1
+//   },
+//   question_11: {
+//     self: 2,
+//     friend: 3
+//   },
+//   question_12: {
+//     self: 2,
+//     friend: 2
+//   },
+//   question_13: {
+//     self: 4,
+//     friend: 4
+//   },
+//   question_14: {
+//     self: 4,
+//     friend: 1
+//   },
+//   question_15: {
+//     self: 5,
+//     friend: 3
+//   },
+//   question_16: {
+//     self: 4,
+//     friend: 2
+//   },
+//   question_17: {
+//     self: 1,
+//     friend: 4
+//   },
+//   question_18: {
+//     self: 1,
+//     friend: 1
+//   },
+//   question_19: {
+//     self: 1,
+//     friend: 3
+//   },
+//   question_20: {
+//     self: 3,
+//     friend: 2
+//   }
+// }
+
+var answers = {};
+var count = 1;
+document.addEventListener("click", function(){
+  if (count < 21){
+    answers["question_" + count] = {
+      self: Math.floor(Math.random() * 5) + 1,
+      friend: Math.floor(Math.random() * 5) + 1
+    }
   }
-}
+  console.log(answers);
+  count++;
+  draw();
+});
 
 function getCoordinates(key, score){
   var radius = 700;
@@ -126,5 +140,3 @@ function draw(){
     ctx.fill();
   }
 }
-
-draw();
