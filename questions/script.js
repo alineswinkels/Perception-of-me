@@ -6,6 +6,15 @@ $(document).ready(function() {
 	"Ik breng een gesprek naar een hoger niveau.", "Ik ben meestal ontspannen.", "Ik laat mensen zich op hun gemak voelen.", "Ik mopper over dingen.", "Ik voel emoties van anderen aan.",
 	"Ik verzaak mijn werkzaamheden.", "Ik vind het niet erg midden in de belangstelling te staan.", "Ik kan veel informatie tegelijkertijd verwerken."];
 
+
+	var sounds = ["button.wav", "confirm.wav", "confirm2.wav", "sub_tone3.wav", "tone5.wav"];
+
+	function play(x){
+		var audio = new Audio("sound/"+sounds[x]);
+		audio.play();
+		console.log("play()");
+	}
+
 	var data = {};
 
 	var i = -1;
@@ -67,26 +76,31 @@ $(document).ready(function() {
 			//q
 			$("#self .not").click();
 			checkself();
+			play(0);
 	  }
 		if(keyCode == 87) {
 			//w
 			$("#self .little").click();
 			checkself();
+			play(1);
 	  }
 		if(keyCode == 69) {
 			//e
 			$("#self .neutral").click();
 			checkself();
+			play(2);
 	  }
 		if(keyCode == 82) {
 			//r
 			$("#self .yes").click();
 			checkself();
+			play(3);
 	  }
 		if(keyCode == 84) {
 			//t
 			$("#self .alot").click();
 			checkself();
+			play(4);
 	  }
 
 		//   EXTERNAL
