@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
+
+.question {
+    /*display: none;*/
+}
+
+body {
+    margin: 0;
+    background-color: #F8E5EE;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.question {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 400;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.answers {
+    width: 40%;
+    float: left;
+    margin: 2% 5% 5% 5%;
+}
+
+.submit {
+    width: 10%;
+    padding: 0.5em;
+    border: 1px solid white;
+    float: left;
+    text-align: center;
+    display: block;
+    margin-left: 45%;
+    cursor: pointer;
+}
+.submit:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+#result {
+    margin: 10px;
+    background: #eee;
+    padding: 10px;
+    height: 40px;
+    overflow: auto;
+}
