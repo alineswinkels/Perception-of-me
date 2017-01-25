@@ -23,7 +23,7 @@ $(document).ready(function() {
 				external: $('input:checked', '#external').val()
 			};
 			$('form :input').prop('checked', false);
-			$(".question").children("h2").html(vraag[i]);
+			$(".question h2").html(vraag[i]);
 			$("#self").children("input").attr('name', 'question'+i);
 
 			draw();
