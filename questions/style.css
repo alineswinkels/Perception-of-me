@@ -56,17 +56,22 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+.wrapper{
+    height: 700px;
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
 canvas{
     height: 700px;
     width: 700px;
     position: absolute;
-    left:20%;
 }
 
 svg {
     width: 700px;
     position: absolute;
-    left: 20%;
     opacity: 0.4;
 }
 
