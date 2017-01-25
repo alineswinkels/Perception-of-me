@@ -8,6 +8,7 @@ body {
     margin: 0;
     background-color: #F8E5EE;
     font-family: 'Titillium Web', sans-serif;
+    width: 200vw;
 }
 h2, h3 {
     font-weight: 400;
@@ -17,7 +18,12 @@ h2 {
     text-align: center;
 }
 .question {
-    /*display: none;*/
+    width: 100vw;
+    float: left;
+    display: block;
+    height: 100vh;
+}
+.question .wrapper{
     width: 80%;
     margin: 0 auto;
 }
@@ -55,6 +61,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    float: left;
 }
 .wrapper{
     height: 700px;
