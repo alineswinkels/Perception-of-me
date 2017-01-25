@@ -11,6 +11,7 @@ body {
     width: 200vw;
 }
 h2, h3 {
+    opacity: 0;
     font-weight: 400;
     color: #eee;
 }
@@ -18,15 +19,26 @@ h2 {
     font-size: 2em;
     text-align: center;
 }
-.question {
-    width: 50vw;
+.question, .question_2{
+    width: 33.33vw;
     float: left;
-    display: block;
     height: 100vh;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    justify-content: center;
+    align-items: center;
 }
-.question .wrapper{
+.question .wrapper, .question_2 .wrapper{
     width: 80%;
     margin: 0 auto;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    justify-content: center;
+    align-items: center;
 }
 .answers {
     width: 40%;
@@ -49,7 +61,7 @@ h2 {
     border-color: black;
 }
 .visual{
-    width: 50vw;
+    width: 33.33vw;
     height: 100vh;
     background-color: #2B2C2E;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -66,22 +78,6 @@ h2 {
     display: block;
     margin: 0 auto;
     position: relative;
-}
-.question{
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-    justify-content: center;
-    align-items: center;
-}
-.question .wrapper{
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-    justify-content: center;
-    align-items: center;
 }
 canvas{
     height: 700px;

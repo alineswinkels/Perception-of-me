@@ -1,12 +1,21 @@
 $(document).ready(function() {
-	var data, count, stageSelf, self, external, loop;
+	var data, count, gender, stageSelf, self, external, loop;
 	var sounds = ["button.wav", "confirm.wav", "confirm2.wav", "sub_tone3.mp3", "tone5.wav"];
 	var vraag = ["Ik maak me zorgen over dingen.", "Ik laat mijn kamer rommelig achter.",
 		"Ik heb een levendige fantasie.", "Ik hou er niet van om de aandacht op me te richten.", "Ik maak tijd vrij voor anderen.", "Ik werk volgens een tijdschema.",
 		"Ik raak zelden geïrriteerd.", "Ik denk eerst aan anderen.", "Ik heb moeite me dingen voor te stellen.", "Ik laat anderen het voortouw nemen.", "Ik ben altijd voorbereid.",
 		"Ik breng een gesprek naar een hoger niveau.", "Ik ben meestal ontspannen.", "Ik laat mensen zich op hun gemak voelen.", "Ik mopper over dingen.", "Ik voel emoties van anderen aan.",
-		"Ik verzaak mijn werkzaamheden.", "Ik vind het niet erg midden in de belangstelling te staan.", "Ik kan veel informatie tegelijkertijd verwerken."];
-
+		"Ik raffel mijn werk af", "Ik vind het niet erg midden in de belangstelling te staan.", "Ik kan veel informatie tegelijkertijd verwerken."];
+	var vraagMan = ["Hij maakt zich zorgen over dingen.", "Hij laat zijn kamer rommelig achter.",
+		"Hij heeft een levendige fantasie.", "Hij houdt er niet van om de aandacht op zich te richten.", "Hij maakt tijd vrij voor anderen.", "Hij werkt volgens een tijdschema.",
+		"Hij raakt zelden geïrriteerd.", "Hij denkt altijd eerst aan anderen.", "Hij heeft moeite zich dingen voor te stellen.", "Hij laat anderen het voortouw nemen.", "Hij is altijd voorbereid.",
+		"Hij brengt een gesprek naar een hoger niveau.", "Hij is meestal ontspannen.", "Hij laat mensen zich op hun gemak voelen.", "Hij moppert over dingen.", "Hij voelt emoties van anderen aan.",
+		"Hij raffelt zijn werk af.", "Hij vindt het niet erg midden in de belangstelling te staan.", "Hij kan veel informatie tegelijkertijd verwerken."];
+	var vraagVrouw = ["Zij maakt zich zorgen over dingen.", "Zij laat haar kamer rommelig achter.",
+		"Zij heeft een levendige fantasie.", "Zij houdt er niet van om de aandacht op zich te richten.", "Zij maakt tijd vrij voor anderen.", "Zij werkt volgens een tijdschema.",
+		"Zij raakt zelden geïrriteerd.", "Zij denkt altijd eerst aan anderen.", "Zij heeft moeite zich dingen voor te stellen.", "Zij laat anderen het voortouw nemen.", "Zij is altijd voorbereid.",
+		"Zij brengt een gesprek naar een hoger niveau.", "Zij is meestal ontspannen.", "Zij laat mensen zich op hun gemak voelen.", "Zij moppert over dingen.", "Zij voelt emoties van anderen aan.",
+		"Zij raffelt haar werk af.", "Zij vindt het niet erg midden in de belangstelling te staan.", "Zij kan veel informatie tegelijkertijd verwerken."];
 	init();
 
 	function play(x){
@@ -24,10 +33,39 @@ $(document).ready(function() {
 			};
 			$('form :input').prop('checked', false);
 			$(".question h2").html(vraag[i]);
+			if(gender == "m"){
+				$(".question_2 h2").html(vraagMan[i]);
+				console.log(gender);
+			} else {
+				$(".question_2 h2").html(vraagVrouw[i]);
+				console.log(gender);
+			}
 			$("#self").children("input").attr('name', 'question'+i);
 
 			draw();
 			console.log(data);
+		}
+	}
+
+	function pickGender(e){
+		var keyCode = e.keyCode;
+		if(keyCode == "77"){
+			gender = "m";
+			$(".question_2 h2").html("Hij spreekt op feestjes veel verschillende mensen.");
+			$("h2").animate({
+				opacity: 1
+			}, 1000);
+			document.removeEventListener("keydown", pickGender, false);
+			document.addEventListener("keydown", keyDown, false);
+		}
+		if(keyCode == "70"){
+			gender = "f";
+			$(".question_2 h2").html("Zij spreekt op feestjes veel verschillende mensen.");
+			$("h2").animate({
+				opacity: 1
+			}, 1000);
+			document.removeEventListener("keydown", pickGender, false);
+			document.addEventListener("keydown", keyDown, false);
 		}
 	}
 
@@ -61,8 +99,6 @@ $(document).ready(function() {
 		e.preventDefault();
 		next();
 	});
-
-	document.addEventListener("keydown", keyDown, false);
 
 	function keyDown(e) {
 	  var keyCode = e.keyCode;
@@ -192,6 +228,7 @@ $(document).ready(function() {
 		stageSelf = new createjs.Stage("selfcanvas");
 		data = {};
 		count = 1;
+		document.addEventListener("keydown", pickGender, false);
 	}
 
 	function getCoordinates(key, score){
