@@ -35,7 +35,7 @@ function getCoordinates(key, score){
   coordinates = {
     x: (canvasWidth / 2) + down,
     y: (canvasWidth / 2) + up
-  }
+  };
 
   return coordinates;
 }
@@ -45,10 +45,11 @@ function draw(){
   stageSelf.update();
   var selfpath = new createjs.Graphics();
   var friendpath = new createjs.Graphics();
+  var startcoordinatesself, startcoordinatesfriend;
   var itemcount = countProperties();
   if (itemcount == 20){
-    var startcoordinatesself = getCoordinates(0, answers["question_1"].self);
-    var startcoordinatesfriend = getCoordinates(0, answers["question_1"].friend);
+    startcoordinatesself = getCoordinates(0, answers["question_1"].self);
+    startcoordinatesfriend = getCoordinates(0, answers["question_1"].friend);
     selfpath.mt(startcoordinatesfriend.x, startcoordinatesfriend.y).f("rgba(241,47,121,0.3)").ss(2, "round", "round").s("#F12F79");
     friendpath.mt(startcoordinatesself.x, startcoordinatesself.y).f("rgba(123,127,130,0.3)").ss(2, "round", "round").s("rgb(123,127,130)");
   } else {
@@ -68,8 +69,8 @@ function draw(){
   }
 
   if (itemcount == 20){
-    var startcoordinatesself = getCoordinates(1, answers["question_1"].self);
-    var startcoordinatesfriend = getCoordinates(1, answers["question_1"].friend);
+    startcoordinatesself = getCoordinates(1, answers["question_1"].self);
+    startcoordinatesfriend = getCoordinates(1, answers["question_1"].friend);
     selfpath.lt(startcoordinatesself.x, startcoordinatesself.y);
     friendpath.lt(startcoordinatesfriend.x, startcoordinatesfriend.y);
   }
