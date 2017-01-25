@@ -6,8 +6,7 @@ $(document).ready(function() {
 	"Ik breng een gesprek naar een hoger niveau.", "Ik ben meestal ontspannen.", "Ik laat mensen zich op hun gemak voelen.", "Ik mopper over dingen.", "Ik voel emoties van anderen aan.",
 	"Ik verzaak mijn werkzaamheden.", "Ik vind het niet erg midden in de belangstelling te staan.", "Ik kan veel informatie tegelijkertijd verwerken."];
 
-
-	var sounds = ["button.wav", "confirm.wav", "confirm2.wav", "sub_tone3.wav", "tone5.wav"];
+	var sounds = ["clickL.mp3", "clickR.mp3", "blop.mp3"];
 
 	function play(x){
 		var audio = new Audio("sound/"+sounds[x]);
@@ -82,25 +81,25 @@ $(document).ready(function() {
 			//w
 			$("#self .little").click();
 			checkself();
-			play(1);
+			play(0);
 	  }
 		if(keyCode == 69) {
 			//e
 			$("#self .neutral").click();
 			checkself();
-			play(2);
+			play(0);
 	  }
 		if(keyCode == 82) {
 			//r
 			$("#self .yes").click();
 			checkself();
-			play(3);
+			play(0);
 	  }
 		if(keyCode == 84) {
 			//t
 			$("#self .alot").click();
 			checkself();
-			play(4);
+			play(0);
 	  }
 
 		//   EXTERNAL
@@ -109,26 +108,31 @@ $(document).ready(function() {
 			//a
 			$("#external .not").click();
 			checkexternal();
+			play(1);
 	  }
 		if(keyCode == 83) {
 			//s
 			$("#external .little").click();
 			checkexternal();
+			play(1);
 	  }
 		if(keyCode == 68) {
 			//d
 			$("#external .neutral").click();
 			checkexternal();
+			play(1);
 	  }
 		if(keyCode == 70) {
 			//f
 			$("#external .yes").click();
 			checkexternal();
+			play(1);
 	  }
 		if(keyCode == 71) {
 			//g
 			$("#external .alot").click();
 			checkexternal();
+			play(1);
 	  }
 	}
 
