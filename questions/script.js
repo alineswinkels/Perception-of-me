@@ -20,12 +20,21 @@ $(document).ready(function() {
 		"Zij raffelt haar werk af.", "Zij vindt het niet erg midden in de belangstelling te staan.", "Zij kan veel informatie tegelijkertijd verwerken."];
 
 	//Sounds that are used via the play function
-	var sounds = ["clickL.mp3", "clickR.mp3", "blop.mp3"];
+	var sounds = ["clickL.mp3", "clickR.mp3", "blop.mp3", "background3.mp3"];
 
 	init();
 
 	function play(x){
 		var audio = new Audio("sound/"+sounds[x]);
+		audio.play();
+	}
+
+	function playLoop(x){
+		var audio = new Audio("sound/"+sounds[x]);
+		audio.addEventListener('ended', function() {
+			this.currentTime = 0;
+			this.play();
+		}, false);
 		audio.play();
 	}
 
@@ -235,6 +244,7 @@ $(document).ready(function() {
 		data = {};
 		count = 1;
 		document.addEventListener("keydown", pickGender, false);
+		playLoop(3);
 	}
 
 	function getCoordinates(key, score){ //Calculate the coordinates for a point on the graph (with the key (=what question) and the score (1 to 5)
