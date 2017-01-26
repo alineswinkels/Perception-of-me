@@ -49,7 +49,7 @@ $(document).ready(function() {
 				$(".question, .question_2").animate({
 					opacity: 1
 				}, 500);
-			}, 1500);
+			}, 500);
 		}
 	}
 
@@ -60,7 +60,7 @@ $(document).ready(function() {
 			$(".question_2 h2").html("Hij spreekt op feestjes veel verschillende mensen.");
 			$("h2").animate({
 				opacity: 1
-			}, 1000);
+			}, 500);
 			document.removeEventListener("keydown", pickGender, false);
 			document.addEventListener("keydown", keyDown, false);
 		}
@@ -69,7 +69,7 @@ $(document).ready(function() {
 			$(".question_2 h2").html("Zij spreekt op feestjes veel verschillende mensen.");
 			$("h2").animate({
 				opacity: 1
-			}, 1000);
+			}, 500);
 			document.removeEventListener("keydown", pickGender, false);
 			document.addEventListener("keydown", keyDown, false);
 		}
@@ -239,6 +239,7 @@ $(document).ready(function() {
 		stageSelf.addChild(selfShape);
 		stageSelf.addChild(friendShape);
 		stageSelf.update();
+		play(2);
 	}
 
 	function init(){
