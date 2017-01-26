@@ -42,8 +42,9 @@ $(document).ready(function() {
 			}
 			$("#self").children("input").attr('name', 'question'+i);
 
-			draw();
-			console.log(data);
+			setTimeout(function(){
+				draw();
+			}, 1500);
 		}
 	}
 
@@ -191,11 +192,11 @@ $(document).ready(function() {
 		if (itemcount == 20){
 			startcoordinatesself = getCoordinates(0, data["question_0"].self);
 			startcoordinatesfriend = getCoordinates(0, data["question_0"].external);
-			selfpath.mt(startcoordinatesfriend.x, startcoordinatesfriend.y).f("rgba(241,47,121,0.3)").ss(2, "round", "round").s("#F12F79");
-			friendpath.mt(startcoordinatesself.x, startcoordinatesself.y).f("rgba(123,127,130,0.3)").ss(2, "round", "round").s("rgb(123,127,130)");
+			selfpath.mt(startcoordinatesfriend.x, startcoordinatesfriend.y).lf(["rgba(37, 93, 221, 0.5)","rgba(56, 215, 243, 0.5)"], [0.8, 0.2], 0, 0, 700, 700).ss(1, "round", "round").s("#38D7F3");
+			friendpath.mt(startcoordinatesself.x, startcoordinatesself.y).f("rgba(180,183,180,0.3)").ss(1, "round", "round").s("rgb(123,127,130)");
 		} else {
-			selfpath.f("rgba(241,47,121,0.3)").ss(2, "round", "round").s("#F12F79").mt(350, 350);
-			friendpath.f("rgba(123,127,130,0.3)").ss(2, "round", "round").s("rgb(123,127,130)").mt(350, 350);
+			selfpath.lf(["rgba(37, 93, 221, 0.5)","rgba(56, 215, 243, 0.5)"], [0.8, 0.2], 0, 0, 700, 700).ss(1, "round", "round").s("#38D7F3").mt(350, 350);
+			friendpath.f("rgba(180,183,180,0.3)").ss(1, "round", "round").s("rgb(123,127,130)").mt(350, 350);
 		}
 
 		for(var answer in data){
