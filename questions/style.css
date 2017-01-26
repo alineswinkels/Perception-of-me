@@ -6,7 +6,7 @@
 }
 body {
     margin: 0;
-    background-color: #2B2C2E;
+    background-color: black;
     font-family: 'Titillium Web', sans-serif;
     width: 200vw;
 }
@@ -63,7 +63,6 @@ h2 {
 .visual{
     width: 33.33vw;
     height: 100vh;
-    background-color: #2B2C2E;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
@@ -73,8 +72,8 @@ h2 {
     float: left;
 }
 .wrapper{
-    height: 700px;
-    width: 700px;
+    height: 780.458139px;
+    width: 780.458139px;
     display: block;
     margin: 0 auto;
     position: relative;
@@ -82,10 +81,12 @@ h2 {
 canvas{
     height: 700px;
     width: 700px;
+    top: 40.2291px;
+    left: 40.2291px;
     position: absolute;
 }
 svg {
-    width: 700px;
+    width: 780.458139px;
     position: absolute;
     opacity: 0.4;
 }
