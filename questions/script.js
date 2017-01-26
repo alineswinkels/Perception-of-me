@@ -33,17 +33,20 @@ $(document).ready(function() {
 			};
 			$('form :input').prop('checked', false);
 			$(".question h2").html(vraag[i]);
-			if(gender == "m"){
-				$(".question_2 h2").html(vraagMan[i]);
-				console.log(gender);
-			} else {
-				$(".question_2 h2").html(vraagVrouw[i]);
-				console.log(gender);
-			}
 			$("#self").children("input").attr('name', 'question'+i);
 
 			setTimeout(function(){
+				if(gender == "m"){
+					$(".question_2 h2").html(vraagMan[i]);
+					console.log(gender);
+				} else {
+					$(".question_2 h2").html(vraagVrouw[i]);
+					console.log(gender);
+				}
 				draw();
+				$(".question, .question_2").animate({
+					opacity: 1
+				}, 500);
 			}, 1500);
 		}
 	}
@@ -77,12 +80,18 @@ $(document).ready(function() {
 	function checkself(){
 		self = 1;
 		checkForms();
+		$(".question").animate({
+			opacity: 0
+		}, 200);
 		return self;
 	}
 
 	function checkexternal(){
 		external = 1;
 		checkForms();
+		$(".question_2").animate({
+			opacity: 0
+		}, 200);
 		return external;
 	}
 
