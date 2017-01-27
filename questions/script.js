@@ -289,7 +289,9 @@ $(document).ready(function() {
 
 
     function checkScore(){
-        var count = 0;
+        var countBig = 0;
+        var countMedium = 0;
+        var countSmall = 0;
         console.log('check');
         for(var answer in data){
             var key = parseInt(answer.split('_').pop());
@@ -301,7 +303,7 @@ $(document).ready(function() {
 
             if (difference > 2 || difference < -2) {
 
-                count = count + 1;
+                countBig = countBig + 1;
                 // console.log("count :" + count);
                 // console.log(answer + "heeft "+ difference + " verschil");
                 // console.log(data[])
@@ -314,8 +316,14 @@ $(document).ready(function() {
                 }
             }
 
+            if (difference == 1 || difference == -1) {
+
+                countSmall = countSmall + 1;
+
+            }
+
         };
-        if (count > 0 && count < 3) {
+        if (countBig > 0 && countBig < 3) {
             for (var answer in data) {
                 var key = parseInt(answer.split('_').pop());
                 var questionNr = key + 1;
@@ -324,7 +332,7 @@ $(document).ready(function() {
 
                     if (difference == 2 || difference == -2) {
 
-                        count = count + 1;
+                        countMedium = countMedium + 1;
 
                         if (gender == 'm') {
 
@@ -338,11 +346,7 @@ $(document).ready(function() {
             }
         }
 
-        else {
-
-        }
-
-        if (count < 2) {
+        if (countBig < 1 && countMedium < 1 && countSmall < 4) {
             $( ".score" ).append( "<p>je zelfbeeld komt veel overeen met het externe beeld</p>" );
         }
     }
