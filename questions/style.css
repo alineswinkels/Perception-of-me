@@ -74,10 +74,9 @@ h2 {
 }
 .score {
     position: absolute;
-    bottom: 7.5%;
-    width: 80%;
-    left: 10%;
-    text-align: center;
+    top: 10vh;
+    width: 30%;
+    left: 5%;
     color: white;
     font-size: 2em;
 }
