@@ -1,21 +1,22 @@
 $(document).ready(function() {
+
 	var data, count, gender, stageSelf, self, external, loop;
 	var sounds = ["button.wav", "confirm.wav", "confirm2.wav", "sub_tone3.mp3", "tone5.wav"];
 	var vraag = ["Ik maak me zorgen over dingen.", "Ik laat mijn kamer rommelig achter.",
-		"Ik heb een levendige fantasie.", "Ik hou er niet van om de aandacht op me te richten.", "Ik maak tijd vrij voor anderen.", "Ik werk volgens een tijdschema.",
+		"Ik heb een levendige fantasie.", "Ik hou ervan om de aandacht op me te richten.", "Ik maak tijd vrij voor anderen.", "Ik werk volgens een tijdschema.",
 		"Ik raak zelden geïrriteerd.", "Ik denk eerst aan anderen.", "Ik heb moeite me dingen voor te stellen.", "Ik laat anderen het voortouw nemen.", "Ik ben altijd voorbereid.",
 		"Ik breng een gesprek naar een hoger niveau.", "Ik ben meestal ontspannen.", "Ik laat mensen zich op hun gemak voelen.", "Ik mopper over dingen.", "Ik voel emoties van anderen aan.",
-		"Ik raffel mijn werk af", "Ik vind het niet erg midden in de belangstelling te staan.", "Ik kan veel informatie tegelijkertijd verwerken."];
+		"Ik raffel mijn werk af", "Ik vind het erg midden in de belangstelling te staan.", "Ik kan veel informatie tegelijkertijd verwerken."];
 	var vraagMan = ["Hij maakt zich zorgen over dingen.", "Hij laat zijn kamer rommelig achter.",
-		"Hij heeft een levendige fantasie.", "Hij houdt er niet van om de aandacht op zich te richten.", "Hij maakt tijd vrij voor anderen.", "Hij werkt volgens een tijdschema.",
+		"Hij heeft een levendige fantasie.", "Hij houdt ervan om de aandacht op zich te richten.", "Hij maakt tijd vrij voor anderen.", "Hij werkt volgens een tijdschema.",
 		"Hij raakt zelden geïrriteerd.", "Hij denkt altijd eerst aan anderen.", "Hij heeft moeite zich dingen voor te stellen.", "Hij laat anderen het voortouw nemen.", "Hij is altijd voorbereid.",
 		"Hij brengt een gesprek naar een hoger niveau.", "Hij is meestal ontspannen.", "Hij laat mensen zich op hun gemak voelen.", "Hij moppert over dingen.", "Hij voelt emoties van anderen aan.",
-		"Hij raffelt zijn werk af.", "Hij vindt het niet erg midden in de belangstelling te staan.", "Hij kan veel informatie tegelijkertijd verwerken."];
+		"Hij raffelt zijn werk af.", "Hij vindt het erg midden in de belangstelling te staan.", "Hij kan veel informatie tegelijkertijd verwerken."];
 	var vraagVrouw = ["Zij maakt zich zorgen over dingen.", "Zij laat haar kamer rommelig achter.",
-		"Zij heeft een levendige fantasie.", "Zij houdt er niet van om de aandacht op zich te richten.", "Zij maakt tijd vrij voor anderen.", "Zij werkt volgens een tijdschema.",
+		"Zij heeft een levendige fantasie.", "Zij houdt ervan om de aandacht op zich te richten.", "Zij maakt tijd vrij voor anderen.", "Zij werkt volgens een tijdschema.",
 		"Zij raakt zelden geïrriteerd.", "Zij denkt altijd eerst aan anderen.", "Zij heeft moeite zich dingen voor te stellen.", "Zij laat anderen het voortouw nemen.", "Zij is altijd voorbereid.",
 		"Zij brengt een gesprek naar een hoger niveau.", "Zij is meestal ontspannen.", "Zij laat mensen zich op hun gemak voelen.", "Zij moppert over dingen.", "Zij voelt emoties van anderen aan.",
-		"Zij raffelt haar werk af.", "Zij vindt het niet erg midden in de belangstelling te staan.", "Zij kan veel informatie tegelijkertijd verwerken."];
+		"Zij raffelt haar werk af.", "Zij vindt het erg midden in de belangstelling te staan.", "Zij kan veel informatie tegelijkertijd verwerken."];
 	init();
 
 	var sounds = ["clickL.mp3", "clickR.mp3", "blop.mp3"];
@@ -199,6 +200,7 @@ $(document).ready(function() {
 	};
 
 	function draw(){
+
 		stageSelf.removeAllChildren();
 		stageSelf.update();
 		var selfpath = new createjs.Graphics();
@@ -232,6 +234,8 @@ $(document).ready(function() {
 			startcoordinatesfriend = getCoordinates(0, data["question_0"].external);
 			selfpath.lt(startcoordinatesself.x, startcoordinatesself.y);
 			friendpath.lt(startcoordinatesfriend.x, startcoordinatesfriend.y);
+
+            checkScore();
 		}
 
 		var friendShape = new createjs.Shape(friendpath);
@@ -239,7 +243,9 @@ $(document).ready(function() {
 		stageSelf.addChild(selfShape);
 		stageSelf.addChild(friendShape);
 		stageSelf.update();
+
 		play(2);
+
 	}
 
 	function init(){
@@ -279,4 +285,66 @@ $(document).ready(function() {
 		}
 		return(count);
 	}
+
+
+
+    function checkScore(){
+        var count = 0;
+        console.log('check');
+        for(var answer in data){
+            var key = parseInt(answer.split('_').pop());
+            var questionNr = key + 1;
+
+            // console.log("self: " + data[answer].self);
+            // console.log("friend: " + data[answer].external);
+            var difference = data[answer].self - data[answer].external;
+
+            if (difference > 2 || difference < -2) {
+
+                count = count + 1;
+                // console.log("count :" + count);
+                // console.log(answer + "heeft "+ difference + " verschil");
+                // console.log(data[])
+                if (gender == 'm') {
+                    console.log(key);
+                    $( ".score" ).append( "<p>" + questionNr + ": " + vraagMan[key] + "</p>" );
+                }
+                if (gender == 'f') {
+                    $( ".score" ).append( "<p>" + questionNr + ": " + vraagVrouw[key] + "</p>" );
+                }
+            }
+
+        };
+        if (count > 0 && count < 3) {
+            for (var answer in data) {
+                var key = parseInt(answer.split('_').pop());
+                var questionNr = key + 1;
+
+                var difference = data[answer].self - data[answer].external;
+
+                    if (difference == 2 || difference == -2) {
+
+                        count = count + 1;
+
+                        if (gender == 'm') {
+
+                            $( ".score" ).append( "<p>" + questionNr + ": " + vraagMan[key] + "</p>" );
+                        }
+                        if (gender == 'f') {
+                            $( ".score" ).append( "<p>" + questionNr + ": " + vraagVrouw[key] + "</p>" );
+                        }
+
+                    }
+            }
+        }
+
+        else {
+
+        }
+
+        if (count < 2) {
+            $( ".score" ).append( "<p>je zelfbeeld komt veel overeen met het externe beeld</p>" );
+        }
+    }
+
 });

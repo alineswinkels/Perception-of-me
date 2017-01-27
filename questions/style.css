@@ -70,6 +70,16 @@ h2 {
     justify-content: center;
     align-items: center;
     float: left;
+    position: relative;
+}
+.score {
+    position: absolute;
+    bottom: 7.5%;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    color: white;
+    font-size: 2em;
 }
 .wrapper{
     height: 780.458139px;

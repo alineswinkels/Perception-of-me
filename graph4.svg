@@ -4,8 +4,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="165px" height="165px" viewBox="-14.724 -15.057 165 165" enable-background="new -14.724 -15.057 165 165"
 	 xml:space="preserve">
-<g id="Layer_2">
-	<rect x="-14.724" y="-16.379" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" width="289.845" height="291.5"/>
+<g id="Layer_2" display="none">
+	
+		<rect x="-14.724" y="-16.379" display="inline" stroke="#FFFFFF" stroke-width="0.2" stroke-miterlimit="10" width="289.845" height="291.5"/>
 </g>
 <g id="Layer_1_1_">
 	<g>
@@ -50,24 +51,24 @@
 		</g>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 66.0415 -10.8369)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">1</text>
-<text transform="matrix(1 0 0 1 90.6924 -6.5972)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">2</text>
-<text transform="matrix(1 0 0 1 114.2256 3.2358)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">3</text>
-<text transform="matrix(1 0 0 1 131.0254 21.9932)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">4</text>
-<text transform="matrix(1 0 0 1 141.6924 44.4028)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">5</text>
-<text transform="matrix(1 0 0 1 144.6924 68.4028)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">6</text>
-<text transform="matrix(1 0 0 1 142.0254 93.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">7</text>
-<text transform="matrix(1 0 0 1 131.0254 116.4038)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">8</text>
-<text transform="matrix(1 0 0 1 113.2256 134.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">9</text>
-<text transform="matrix(1 0 0 1 88.6924 145.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">10</text>
-<text transform="matrix(1 0 0 1 65.2256 148.9429)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">11</text>
-<text transform="matrix(1 0 0 1 40.2256 144.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">12</text>
-<text transform="matrix(1 0 0 1 17.2256 134.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">13</text>
-<text transform="matrix(1 0 0 1 0.2256 117.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">14</text>
-<text transform="matrix(1 0 0 1 -11.7744 93.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">15</text>
-<text transform="matrix(1 0 0 1 -14.7236 69.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">16</text>
-<text transform="matrix(1 0 0 1 -11.7236 44.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">17</text>
-<text transform="matrix(1 0 0 1 -0.7236 21.7368)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">18</text>
-<text transform="matrix(1 0 0 1 17.2256 4.0698)" fill="#F7F7F7" font-family="'Avenir-Roman'" font-size="6">19</text>
-<text transform="matrix(1 0 0 1 38.2256 -6.5972)" fill="#F4F4F4" font-family="'Avenir-Roman'" font-size="6">20</text>
+<text transform="matrix(1 0 0 1 142.0254 44.4028)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">1</text>
+<text transform="matrix(1 0 0 1 144.6924 68.4028)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">2</text>
+<text transform="matrix(1 0 0 1 141.8184 93.7368)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">3</text>
+<text transform="matrix(1 0 0 1 131.0254 116.4038)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">4</text>
+<text transform="matrix(1 0 0 1 113.2256 134.7368)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">5</text>
+<text transform="matrix(1 0 0 1 90.6924 145.7368)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">6</text>
+<text transform="matrix(1 0 0 1 67.8218 148.9429)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">7</text>
+<text transform="matrix(1 0 0 1 42.3584 145.7368)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">8</text>
+<text transform="matrix(1 0 0 1 19.4146 134.7368)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">9</text>
+<text transform="matrix(1 0 0 1 -0.3833 116.4038)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">10</text>
+<text transform="matrix(1 0 0 1 -11.7163 93.7368)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">11</text>
+<text transform="matrix(1 0 0 1 -14.7236 68.4028)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">12</text>
+<text transform="matrix(1 0 0 1 -11.7163 45.6484)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">13</text>
+<text transform="matrix(1 0 0 1 -0.3833 22.9932)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">14</text>
+<text transform="matrix(1 0 0 1 16.5586 4.7344)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">15</text>
+<text transform="matrix(1 0 0 1 38.23 -6.5972)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">16</text>
+<text transform="matrix(1 0 0 1 65.0757 -9.5986)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">17</text>
+<text transform="matrix(1 0 0 1 89.5732 -6.5981)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">18</text>
+<text transform="matrix(1 0 0 1 112.2256 4.7344)" fill="#F7F7F7" font-family="'Avenir-Light'" font-size="6">19</text>
+<text transform="matrix(1 0 0 1 130.1982 21.7344)" fill="#F4F4F4" font-family="'Avenir-Light'" font-size="6">20</text>
 </svg>
