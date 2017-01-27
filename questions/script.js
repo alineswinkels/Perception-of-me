@@ -345,7 +345,7 @@ $(document).ready(function() {
             }
         }
 
-        if (countBig < 1 && countMedium < 1 && countSmall < 4) {
+        if (countBig < 1 && countMedium < 2 && countSmall < 3) {
             $( ".score" ).append( "<p>je zelfbeeld komt veel overeen met het externe beeld</p>" );
         }
     }
